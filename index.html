@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fonajus em pauta</title>
+<meta name="description" content="Material de estudo para a entrevista ao vivo no jornal Justiça Agora, da TV Justiça, sobre o Fonajus Itinerante no Ceará e a judicialização da saúde.">
+<link rel="icon" href="assets/borelli-favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --noite:#172B3D; --marinho:#244460; --abismo:#0F1D2A; --mare:#1E354B;
+  --ouro:#C9A24D; --champanhe:#EBD081;
+  --papel:#F7F9FB; --nevoa:#E1ECF5; --branco:#FFFFFF;
+  --gelo:#DCE6EF; --bruma:#AEBCCB; --grafite:#3F4A56; --pedra:#5B6875;
+  --grifo:#FFE9A8; --linha-clara:#DFE7EE; --linha-escura:#2A4057;
+  --ok:#1E7B4F; --erro:#B42318;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--grafite);font-family:Lexend,Inter,Arial,sans-serif;font-weight:300;font-size:17px;line-height:1.68;font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:Newsreader,"Source Serif 4",Georgia,serif;font-weight:500;font-optical-sizing:auto;color:var(--noite);line-height:1.12;margin:0}
+h1 em,h2 em,h3 em{font-style:normal;background:linear-gradient(transparent 55%,var(--grifo) 55%);padding:0 .08em}
+strong{font-weight:500;color:var(--noite)}
+a{color:var(--marinho);text-underline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+
+/* Topo */
+.topo{background:var(--noite);color:var(--gelo);padding:28px 0 40px}
+.topo img{display:block;width:200px;max-width:60%;height:auto;margin-bottom:36px}
+.rot{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.topo .rot{color:var(--ouro)}
+.topo h1{color:var(--branco);font-size:48px;margin:10px 0 14px}
+.topo h1 em{background:none;border-bottom:2px solid var(--ouro);padding:0}
+.topo p{margin:0;color:var(--gelo);max-width:640px}
+.ficha{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--linha-escura);border:1px solid var(--linha-escura);margin-top:28px}
+.ficha div{background:var(--mare);padding:14px 16px}
+.ficha b{display:block;font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--champanhe);margin-bottom:4px}
+.ficha span{color:var(--branco);font-size:15px;line-height:1.45;display:block}
+
+/* Seções */
+section{padding:44px 0 8px}
+section > .wrap > .rot{color:var(--pedra)}
+h2{font-size:36px;margin:8px 0 18px}
+h3{font-size:22px;margin:26px 0 8px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px;padding-left:1.2em}
+li{margin:0 0 8px}
+li::marker{color:var(--marinho)}
+
+.chave{background:var(--branco);border:1px solid var(--linha-clara);border-left:3px solid var(--marinho);padding:18px 20px;margin:0 0 12px}
+.chave .n{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:22px;color:var(--marinho);margin-right:8px}
+.chave p{margin:0;color:var(--noite);font-weight:400}
+
+.fala{font-family:Newsreader,Georgia,serif;font-style:italic;font-size:21px;line-height:1.45;color:var(--noite);border-left:2px solid var(--ouro);padding:4px 0 4px 18px;margin:18px 0}
+
+.mapa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:8px 0 14px}
+.mapa div{background:var(--nevoa);padding:16px 18px}
+.mapa b{display:block;font-family:Newsreader,Georgia,serif;font-weight:600;font-size:19px;color:var(--noite);margin-bottom:4px}
+.mapa span{font-size:15px;line-height:1.55;display:block}
+
+.tabela{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:15px;line-height:1.55;background:var(--branco)}
+.tabela th,.tabela td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--linha-clara)}
+.tabela th{background:var(--nevoa);color:var(--noite);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.tabela td:first-child{font-weight:500;color:var(--noite);width:26%}
+
+.lados{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:8px 0 14px}
+.lado{background:var(--branco);border:1px solid var(--linha-clara);padding:18px 20px}
+.lado h3{margin-top:0;font-size:20px}
+.lado ul{margin-bottom:0}
+.lado.bom{border-top:3px solid var(--ok)}
+.lado.ruim{border-top:3px solid var(--erro)}
+
+.numeros{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:8px 0 6px}
+.numeros div{background:var(--noite);color:var(--gelo);padding:18px}
+.numeros b{display:block;font-family:Newsreader,Georgia,serif;font-weight:600;font-size:34px;line-height:1.05;color:var(--champanhe);margin-bottom:6px}
+.numeros span{font-size:14px;line-height:1.5;display:block}
+.fonte-n{font-size:13px;color:var(--pedra)}
+
+.pr{border-bottom:1px solid var(--linha-clara);padding:14px 0}
+.pr:first-of-type{border-top:1px solid var(--linha-clara)}
+.pr .q{font-weight:500;color:var(--noite);margin:0 0 4px}
+.pr .r{margin:0}
+
+.alerta{background:var(--nevoa);padding:18px 20px;margin:8px 0 14px}
+.alerta ul{margin:0}
+
+.fontes{font-size:14px;line-height:1.6}
+.fontes li{word-break:break-word}
+
+footer{background:var(--abismo);color:var(--bruma);font-size:13px;line-height:1.6;padding:26px 0;margin-top:44px}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  .topo h1{font-size:34px}
+  h2{font-size:28px}
+  .ficha,.mapa,.lados,.numeros{grid-template-columns:1fr}
+  .tabela thead{display:none}
+  .tabela,.tabela tbody,.tabela tr,.tabela td{display:block;width:100%}
+  .tabela tr{border-bottom:1px solid var(--linha-clara);padding:6px 0}
+  .tabela td{border:0;padding:6px 14px}
+  .tabela td:first-child{width:100%;font-family:Newsreader,Georgia,serif;font-size:19px}
+  .tabela td[data-r]::before{content:attr(data-r);display:block;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--pedra)}
+}
+@media print{
+  .topo,.numeros div,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{break-inside:avoid-page}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <img src="assets/borelli-horizontal-ouro-web.png" alt="Borelli Advocacia" width="1200" height="262">
+    <span class="rot">Material de estudo · entrevista ao vivo</span>
+    <h1>Fonajus, NatJus e a <em>segurança</em> jurídica na saúde</h1>
+    <p>O que é o Fórum, o que acontece no Ceará esta semana, quais regras mudaram o jogo e o que dizer de bom, de crítico e de equilibrado em poucos minutos no ar.</p>
+    <div class="ficha">
+      <div><b>Programa</b><span>Justiça Agora, jornal matinal da TV Justiça (STF), com Rafaela Vivas</span></div>
+      <div><b>Quando</b><span>Quarta, 14/10, ao vivo por Zoom, às 8h15 ou 8h45</span></div>
+      <div><b>Gancho</b><span>Fonajus Itinerante no Ceará, 14 e 15/10, com os 10 anos do NatJus</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <span class="rot">Se lembrar de só uma coisa</span>
+    <h2>Três <em>mensagens</em> para levar ao ar</h2>
+    <div class="chave"><p><span class="n">1</span>O Fonajus organiza a judicialização da saúde: transforma milhares de processos isolados em regras, técnica e diálogo entre Judiciário, gestor público, planos e pacientes.</p></div>
+    <div class="chave"><p><span class="n">2</span>Desde 2024 e 2025 as regras ficaram mais claras e mais exigentes, tanto no SUS (Temas 6 e 1234) quanto nos planos de saúde (ADI 7.265). Isso dá previsibilidade, mas também levanta a barreira para quem precisa do tratamento.</p></div>
+    <div class="chave"><p><span class="n">3</span>A técnica deve qualificar a decisão, não substituir o olhar sobre o paciente. A nota técnica do NatJus ajuda o juiz, mas não é sentença: cada caso tem uma pessoa real por trás.</p></div>
+    <p class="fala">“Sou a favor da técnica e contra o automatismo. A nota técnica qualifica a decisão; quem decide é o juiz, olhando o paciente concreto.”</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">O que é</span>
+    <h2>O <em>Fonajus</em> em um minuto</h2>
+    <p>O <strong>Fórum Nacional do Judiciário para a Saúde (Fonajus)</strong> foi criado pelo Conselho Nacional de Justiça (CNJ) pela <strong>Resolução 107/2010</strong>. Ele estuda as demandas de saúde, propõe medidas e normas, aprova enunciados (orientações para os juízes) e coordena a política do Judiciário para resolver esses conflitos de forma adequada. Hoje é supervisionado pela conselheira do CNJ <strong>Daiane Nogueira de Lira</strong>.</p>
+    <p><strong>O Fonajus Itinerante</strong> é o Fórum indo aos estados: visitas, reuniões com tribunais, comitês e hospitais, seminário e capacitação de juízes e servidores, para pôr em prática essa política em cada lugar.</p>
+
+    <h3>O NatJus está dentro do Fonajus? Sim, é o braço técnico.</h3>
+    <div class="mapa">
+      <div><b>Fonajus (CNJ)</b><span>Coordena a política nacional, edita enunciados e diretrizes.</span></div>
+      <div><b>Comitês Estaduais de Saúde</b><span>Executam a política em cada estado (Resolução 238/2016, alterada pela 388/2021) e supervisionam os NatJus.</span></div>
+      <div><b>NatJus</b><span>Núcleos de Apoio Técnico do Judiciário, nos tribunais: médicos e farmacêuticos que emitem notas técnicas para o juiz sobre o pedido.</span></div>
+      <div><b>e-NatJus e NatJus Nacional</b><span>Plataforma nacional onde as notas ficam disponíveis a qualquer juiz, e apoio técnico à distância, inclusive em urgências.</span></div>
+    </div>
+    <p>Para lembrar: o Fonajus define <strong>o rumo</strong>, o comitê estadual faz <strong>a ponte</strong> e o NatJus entrega <strong>a análise técnica</strong> que o juiz usa para decidir.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">O gancho da entrevista</span>
+    <h2>O Fonajus Itinerante no <em>Ceará</em></h2>
+    <p>Organizado pelo CNJ com o Tribunal de Justiça do Ceará (TJCE) e a Justiça Federal no Ceará.</p>
+    <ul>
+      <li><strong>14/10:</strong> reuniões com a Justiça Federal e a Presidência do TJCE; visitas ao Núcleo de Defesa da Saúde (Nudesa) e ao Hospital Universitário do Ceará, com reunião do Comitê Estadual de Saúde.</li>
+      <li><strong>15/10, na Escola Superior da Magistratura do Ceará (Esmec):</strong> seminário “Os Desafios e Perspectivas da Judicialização em Saúde”, aberto a magistrados, Ministério Público, Defensoria, advogados e interessados.</li>
+      <li><strong>Na abertura:</strong> conselheira Daiane Nogueira (CNJ), desembargador Heráclito Vieira de Sousa Neto (presidente do TJCE) e Júlio Rodrigues Coelho Neto (diretor do Foro da Justiça Federal no Ceará).</li>
+      <li><strong>Marcos:</strong> os <strong>10 anos do NatJus</strong> e a instalação do <strong>Comitê Regional de Saúde do Sertão Central</strong>, levando a política para o interior.</li>
+      <li><strong>Painéis:</strong> NatJus e <strong>doenças raras</strong> (Rudi Roman, Telessaúde do Hospital de Clínicas de Porto Alegre); a União no cumprimento das decisões depois dos <strong>Temas 6 e 1234</strong> (Tarciana Barreto, Ministério da Saúde).</li>
+      <li><strong>Oficina para juízes:</strong> repercussão geral e súmulas vinculantes (juíza Luciana da Veiga Oliveira, CNJ) e <strong>saúde suplementar e ADI 7.265</strong> (juiz federal Clênio Schulze, TRF4).</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">As regras que mudaram o jogo</span>
+    <h2>O que o juiz precisa <em>observar</em> hoje</h2>
+    <table class="tabela">
+      <thead><tr><th>Decisão</th><th>O que diz</th><th>Na prática</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Tema 6 do STF<br>(Súmula Vinculante 61)</td>
+          <td data-r="O que diz">Remédio registrado na Anvisa, mas fora das listas do SUS: em regra, não se concede na Justiça. A exceção exige requisitos somados: negativa administrativa; não incorporação ilegal pela Conitec, sem pedido ou com demora; nenhum substituto nas listas; eficácia e segurança provadas por estudos de alto nível; laudo fundamentado mostrando que é imprescindível; e incapacidade de pagar.</td>
+          <td data-r="Na prática">O juiz não pode decidir só com a receita ou o laudo do médico do paciente: precisa consultar o NatJus ou especialistas.</td>
+        </tr>
+        <tr>
+          <td>Tema 1234 do STF<br>(Súmula Vinculante 60)</td>
+          <td data-r="O que diz">Acordo entre União, estados e municípios sobre quem paga e onde a ação corre. Remédio não incorporado com custo anual acima de 210 salários mínimos vai para a Justiça Federal, e a União paga; abaixo disso, Justiça Estadual, com ressarcimento parcial da União.</td>
+          <td data-r="Na prática">Exige pedido prévio ao SUS e acaba com o “jogo de empurra” entre os entes sobre quem responde.</td>
+        </tr>
+        <tr>
+          <td>ADI 7.265<br>(planos de saúde, set/2025)</td>
+          <td data-r="O que diz">O STF manteve a lei que obriga cobrir tratamento fora do rol da ANS, mas com cinco requisitos somados: prescrição do médico ou dentista assistente; a ANS não ter negado expressamente nem estar analisando a inclusão; nenhuma alternativa no rol; eficácia e segurança com evidência de alto nível; e registro na Anvisa.</td>
+          <td data-r="Na prática">Aproxima o plano de saúde da lógica do SUS. A consulta ao NatJus passou a valer também para a saúde suplementar.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">Para citar no ar</span>
+    <h2>Os números do <em>tamanho</em> do tema</h2>
+    <div class="numeros">
+      <div><b>941 mil</b><span>processos de saúde em tramitação no país, somando SUS (491 mil) e planos (435 mil)</span></div>
+      <div><b>482 mil</b><span>notas técnicas emitidas pelos NatJus até julho de 2026; alta de 37% em 2025</span></div>
+      <div><b>39% → 65%</b><span>parcela de notas contrárias ao pedido, de 2021 para 2025</span></div>
+    </div>
+    <p class="fonte-n">Dados do CNJ publicados pela Futuro da Saúde em 21/07/2026. Use como “cerca de” e cite a fonte: “segundo o CNJ”.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">Os dois lados</span>
+    <h2>O lado <em>bom</em> e as críticas</h2>
+    <div class="lados">
+      <div class="lado bom">
+        <h3>O que há de bom</h3>
+        <ul>
+          <li>Decisão com base técnica, e não só na emoção do caso ou no laudo isolado.</li>
+          <li>Regras iguais para casos iguais, em todo o país.</li>
+          <li>Diálogo entre Judiciário, gestores, planos, Defensoria e advocacia.</li>
+          <li>Apoio técnico rápido em urgências pelo NatJus Nacional.</li>
+          <li>Mais clareza sobre quem paga e onde a ação deve correr.</li>
+          <li>Proteção do orçamento coletivo do SUS e do equilíbrio dos planos.</li>
+        </ul>
+      </div>
+      <div class="lado ruim">
+        <h3>As críticas</h3>
+        <ul>
+          <li><strong>Pacientes:</strong> a nota pode virar barreira automática, sem olhar o caso clínico individual (crítica da Federação Brasileira das Associações de Doenças Raras).</li>
+          <li><strong>Defensorias:</strong> pareceres que vão além da técnica e entram em custo e orçamento; juízes que adotam a nota integralmente, até em urgência.</li>
+          <li><strong>Indústria:</strong> notas diferentes para casos parecidos e uso de estudos ou decisões da Conitec desatualizados.</li>
+          <li>Exigência de prova científica difícil de produzir, sobretudo em doenças raras, em que quase não há grandes estudos.</li>
+          <li>Quem tem menos recursos tem mais dificuldade de cumprir todos os requisitos.</li>
+          <li>O caminho administrativo prévio pode atrasar casos urgentes.</li>
+        </ul>
+      </div>
+    </div>
+    <p>A resposta do CNJ, pela conselheira Daiane Nogueira de Lira: as notas <strong>não vinculam</strong> o juiz, que deve analisá-las junto com as demais provas do processo.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">A pergunta central</span>
+    <h2>Segurança ou <em>insegurança</em> jurídica?</h2>
+    <div class="lados">
+      <div class="lado bom">
+        <h3>Onde ganhamos segurança</h3>
+        <ul>
+          <li>Súmulas vinculantes: todos os juízes seguem o mesmo critério.</li>
+          <li>Requisitos objetivos e conhecidos antes de entrar com a ação.</li>
+          <li>Competência e responsabilidade de cada ente definidas.</li>
+          <li>Planos e SUS sabem o que precisam cobrir e por quê.</li>
+          <li>Base de notas compartilhada no e-NatJus.</li>
+        </ul>
+      </div>
+      <div class="lado ruim">
+        <h3>Onde ainda há insegurança</h3>
+        <ul>
+          <li>Notas diferentes para casos semelhantes.</li>
+          <li>Regras de competência e ressarcimento ajustadas por novos acordos (oncológicos, 2025), com processos antigos em regime de transição.</li>
+          <li>Requisitos abertos, como “ilegalidade” da decisão da Conitec e “evidência de alto nível”.</li>
+          <li>Estrutura e equipe dos NatJus variam de tribunal para tribunal.</li>
+          <li>Doenças raras e urgências ainda sem resposta uniforme.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fala">“Ganhamos previsibilidade nas regras. O desafio agora é garantir que essa previsibilidade não vire uma porta fechada para o paciente que preenche os requisitos.”</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">Ensaio</span>
+    <h2>Perguntas <em>prováveis</em> e respostas curtas</h2>
+    <div class="pr"><p class="q">O que é o Fonajus e por que ele vem ao Ceará?</p><p class="r">É o fórum do CNJ que organiza a resposta do Judiciário às demandas de saúde. Ele vem para fortalecer o comitê estadual, celebrar os 10 anos do NatJus, levar a política ao interior com o comitê do Sertão Central e capacitar juízes nas regras novas.</p></div>
+    <div class="pr"><p class="q">O que é o NatJus e como ele ajuda o cidadão?</p><p class="r">É um núcleo técnico, com médicos e farmacêuticos, que analisa o pedido e orienta o juiz. Ajuda a decidir com mais segurança e rapidez, inclusive em urgências. Mas é um apoio: quem decide é o juiz.</p></div>
+    <div class="pr"><p class="q">As decisões do STF dificultaram o acesso a remédios?</p><p class="r">Elas trouxeram critérios claros, o que é bom. Ao mesmo tempo, a exigência ficou maior: hoje é preciso pedir antes ao SUS ou ao plano, provar a evidência científica e que não há alternativa. Para quem cumpre os requisitos, o caminho ficou mais previsível.</p></div>
+    <div class="pr"><p class="q">E nos planos de saúde, o rol da ANS é taxativo?</p><p class="r">Desde setembro de 2025 o STF definiu um meio-termo: o rol é a referência, mas o plano deve cobrir tratamento fora dele quando houver cinco requisitos juntos, entre eles prescrição médica, ausência de alternativa no rol, evidência científica forte e registro na Anvisa.</p></div>
+    <div class="pr"><p class="q">E as pessoas com deficiência e com doenças raras?</p><p class="r">São quem mais sente o efeito das regras, porque muitas vezes não existem grandes estudos para a condição delas. Por isso o painel de doenças raras do Fonajus é importante: a técnica precisa considerar essa realidade para não excluir quem mais precisa.</p></div>
+    <div class="pr"><p class="q">O que o cidadão deve fazer antes de procurar a Justiça?</p><p class="r">Pedir primeiro ao SUS ou ao plano, por escrito, e guardar a negativa. Ter um laudo médico detalhado, que explique por que aquele tratamento é necessário e por que as alternativas não servem. Isso é o que o juiz e o NatJus vão analisar.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">No ar</span>
+    <h2>Cuidados para a <em>entrevista</em></h2>
+    <div class="alerta">
+      <ul>
+        <li>A TV Justiça é do STF: tom institucional. Critique o modelo de forma construtiva, nunca ministros, juízes ou o próprio Tribunal.</li>
+        <li>Respostas de 30 a 60 segundos, com um exemplo por resposta. Comece pela conclusão.</li>
+        <li>Fale como advogado da área, a serviço da informação: sem citar clientes ou casos identificáveis, sem prometer resultado e sem convidar o público a procurar o escritório (regras de publicidade da OAB).</li>
+        <li>O convite veio pela Comissão PcD da OAB/CE: tenha pronta a ponte com pessoas com deficiência e doenças raras.</li>
+        <li>Diga as siglas por extenso na primeira vez: Núcleo de Apoio Técnico do Judiciário, Comissão Nacional de Incorporação de Tecnologias no SUS (Conitec).</li>
+        <li>Zoom: câmera na altura dos olhos, luz de frente, fundo neutro, fone com microfone, internet a cabo se possível e entrar 15 minutos antes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="rot">Fontes</span>
+    <h2>Para <em>conferir</em></h2>
+    <ul class="fontes">
+      <li><a href="https://www.cnj.jus.br/fonajus-itinerante-aprofunda-debate-sobre-judicializacao-da-saude-no-ceara/">CNJ · Fonajus Itinerante aprofunda debate sobre judicialização da saúde no Ceará (13/10/2026)</a></li>
+      <li><a href="https://futurodasaude.com.br/natjus-judicializacao-saude/">Futuro da Saúde · NatJus ganham protagonismo, mas modelo enfrenta críticas (21/07/2026)</a></li>
+      <li><a href="https://www.cnj.jus.br/wp-content/uploads/2025/11/guia-rapido-tema-6-e-1234-versao-reduzida.pdf">CNJ · Guia rápido dos Temas 6 e 1234</a></li>
+      <li><a href="https://noticias.stf.jus.br/postsnoticias/stf-homologa-acordo-que-fixa-diretrizes-para-ressarcimento-de-medicamentos-oncologicos/">STF · Acordo que fixa diretrizes para medicamentos oncológicos</a></li>
+      <li><a href="https://portaltj.tjrj.jus.br/documents/d/guest/cartilha_adi-7265_251106_103327">TJRJ · Cartilha da ADI 7.265</a></li>
+      <li><a href="https://www.migalhas.com.br/coluna/migalhas-de-direito-medico-e-bioetica/461395/natjus-nao-e-conitec-os-limites-da-nota-tecnica-na-judicializacao">Migalhas · NatJus não é Conitec: os limites da nota técnica</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Borelli Advocacia · Direito da Saúde · material de estudo pessoal, de uso interno. Confira a redação oficial das teses no site do STF antes de citar trechos literais.</div>
+</footer>
+
+</body>
+</html>
